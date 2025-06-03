@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afghaanse Kleren Bestellen - Zehra's Shop</title>
+  <style>
+    /* Algemene stijl */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #9c275a;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Productlijst */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      height: 350px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 15px 0 5px;
+      font-size: 1.4rem;
+    }
+    .product p.description {
+      font-size: 1rem;
+      color: #555;
+      height: 60px;
+    }
+    .product p.price {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #9c275a;
+      margin-top: 10px;
+    }
+
+    /* Bestelformulier */
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+    form h2 {
+      margin-top: 0;
+      color: #9c275a;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    form input[type="submit"] {
+      margin-top: 20px;
+      background-color: #9c275a;
+      color: white;
+      padding: 15px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+    form input[type="submit"]:hover {
+      background-color: #7a1f44;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #9c275a;
+      color: white;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Zehra's Afghaanse Kleren Shop</h1>
+  <p>Traditionele Logari en Panjabi kleren, rechtstreeks uit Afghanistan</p>
+</header>
+
+<main>
+
+  <section class="products">
+    <article class="product">
+      <img src="https://via.placeholder.com/280x350?text=Logari+Kleren" alt="Logari Kleren" />
+      <h3>Logari Kleren</h3>
+      <p class="description">Prachtige, handgemaakte Logari jurk met rijke borduurwerk.</p>
+      <p class="price">€135</p>
+    </article>
+
+    <article class="product">
+      <img src="https://via.placeholder.com/280x350?text=Panjabi+Kleren" alt="Panjabi Kleren" />
+      <h3>Panjabi Kleren</h3>
+      <p class="description">Elegante en traditionele Panjabi stijl jurk.</p>
+      <p class="price">€90</p>
+    </article>
+
+    <article class="product">
+      <img src="https://via.placeholder.com/280x350?text=Party+Kleren" alt="Party Kleren" />
+      <h3>Party Kleren</h3>
+      <p class="description">Feestelijke jurken met schitterende versieringen.</p>
+      <p class="price">€160</p>
+    </article>
+  </section>
+
+  <section>
+    <form id="orderForm">
+      <h2>Bestel jouw kleren</h2>
+
+      <label for="naam">Naam:</label>
+      <input type="text" id="naam" name="naam" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="product">Kies product:</label>
+      <select id="product" name="product" required>
+        <option value="">-- Kies een product --</option>
+        <option value="Logari Kleren">Logari Kleren - €135</option>
+        <option value="Panjabi Kleren">Panjabi Kleren - €90</option>
+        <option value="Party Kleren">Party Kleren - €160</option>
+      </select>
+
+      <label for="aantal">Aantal:</label>
+      <input type="number" id="aantal" name="aantal" min="1" value="1" required />
+
+      <input type="submit" value="Bestel nu" />
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Zehra's Afghaanse Kleren Shop
+</footer>
+
+<script>
+  // Eenvoudige bestelformulier-afhandeling
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const naam = document.getElementById('naam').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const product = document.getElementById('product').value;
+    const aantal = parseInt(document.getElementById('aantal').value, 10);
+
+    if (!naam || !email || !product || aantal < 1) {
+      alert('Vul alle velden correct in.');
+      return;
+    }
+
+    // Voor nu tonen we alleen een bedankbericht:
+    alert(`Bedankt voor je bestelling, ${naam}!\n\nJe hebt besteld:\n${aantal} x ${product}.\nWe nemen snel contact met je op via ${email}.`);
+
+    // Optioneel: formulier resetten
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
